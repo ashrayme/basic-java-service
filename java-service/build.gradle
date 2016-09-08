@@ -1,0 +1,22 @@
+jar {
+    baseName = 'java-service'
+    version = '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '1.4.0.RELEASE'
+}
+
+springBoot {
+    executable = true
+    mainClass = 'com.ansible.workshop.Application'
+    layout = 'ZIP'
+}
