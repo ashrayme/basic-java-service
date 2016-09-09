@@ -5,6 +5,8 @@ import com.ansible.workshop.repository.CommentsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CommentService {
 
@@ -17,5 +19,9 @@ public class CommentService {
 
     public Comment saveComment(Comment comment) {
         return commentsRepository.save(comment);
+    }
+
+    public List<Comment> getAllComments() {
+        return commentsRepository.findAll();
     }
 }
