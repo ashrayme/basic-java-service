@@ -39,4 +39,8 @@ public class Comment {
     public int hashCode() {
         return HashCodeBuilder.reflectionHashCode(this);
     }
+
+    public static Comment emptyComment() {
+        return new Comment();
+    }
 }
